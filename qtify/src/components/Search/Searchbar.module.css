@@ -1,13 +1,13 @@
 .search{
     display: flex;
-    justify-content:space-between;
     width: 568px;
     height: 45px;
-    gap: 0;
 }
 .search_field{
     background-color: white;
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 502px;
