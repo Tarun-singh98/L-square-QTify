@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 function Button() {
   return (
     <div>
-      <div className={styles.button}>Give Feedback</div>
+      <button className={styles.button}>Give Feedback</button>
     </div>
   );
 }
