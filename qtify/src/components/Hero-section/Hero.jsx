@@ -10,7 +10,7 @@ function Hero() {
             <p>Over thousands podcast episodes</p>
           </div>
           <div className={styles.hero_image}>
-          <img src={require("../../assets/vibrating-headphone.png")} alt="logo"></img>
+          <img src={require("../../assets/vibrating-headphone.png")} alt="hero_image"></img>
           </div>
         </div>
     </div>
