@@ -25,13 +25,16 @@ function AlbumSection({ title, dataSource }) {
       </div>
       {isShowAll ? (
         <div className={styles.Card_wrapper}>
-          <Card data={Cards} type={"album"} />
+          {Cards.map((card) =>(
+            <Card data={card} type={"album"} />
+          ))}
+          
         </div>
       ) : (
         <Carousel
           data={Cards}
           showData={(data) => {
-            <div>Cards</div>;
+            <div style={{color:"#fff"}}>Cards</div>;
           // <Card data={data} type={"album"} />;
         }}
         />
