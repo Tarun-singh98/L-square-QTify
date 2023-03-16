@@ -1,0 +1,15 @@
+.FAQ_section{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.FAQ_title{
+    font-size:50px;
+    font-weight:600;
+}
+ 
+ 

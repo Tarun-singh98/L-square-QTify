@@ -9,9 +9,18 @@
   font-weight: 600;
   padding-bottom: 18px;
 }
+.Card_wrapper {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+.Carousal_wrapper {
+  color: var(--color-white);
+}
 .text1 {
   color: var(--color-white);
 }
 .text2 {
   color: var(--color-primary);
+  cursor: pointer;
 }
