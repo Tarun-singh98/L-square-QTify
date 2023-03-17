@@ -3,7 +3,7 @@ import styles from "./AlbumSection.module.css";
 import Card from "../Card/Card.jsx";
 import Carousel from "../Carousel/Carousel";
 
-function AlbumSection({ title, dataSource }) {
+function AlbumSection({ title, type, dataSource }) {
   const [Cards, setCards] = useState([]);
   const [isShowAll, setIsShowAll] = useState(false);
 
@@ -20,23 +20,23 @@ function AlbumSection({ title, dataSource }) {
       <div className={styles.album_top}>
         <div className={styles.text1}>{title}</div>
         <div className={styles.text2} onClick={handleToggle}>
-          <h4> {isShowAll ? "Collapse" : "Show All"}</h4>
+          {type === "song" ? (
+            ""
+          ) : (
+            <h4> {isShowAll ? "Collapse" : "Show All"}</h4>
+          )}
         </div>
       </div>
       {isShowAll ? (
         <div className={styles.Card_wrapper}>
-          {Cards.map((card) =>(
-            <Card data={card} type={"album"} />
+          {Cards.map((card) => (
+            <Card data={card} type={type} />
           ))}
-          
         </div>
       ) : (
         <Carousel
           data={Cards}
-          showData={(data) => {
-            <div style={{color:"#fff"}}>Cards</div>;
-          // <Card data={data} type={"album"} />;
-        }}
+          showData={(data) => <Card data={data} type={type} />}
         />
       )}
     </div>

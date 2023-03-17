@@ -13,3 +13,23 @@ export const fetchTopSongs = async () => {
     console.log(error);
   }
 };
+
+export const fetchNewSongs = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_URL}/albums/new`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchSongs = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_URL}/songs`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+

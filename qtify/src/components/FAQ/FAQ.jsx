@@ -1,44 +1,24 @@
 import React from "react";
+import AccordionBox from "../Accordion/Accordion";
 import styles from "./FAQ.module.css";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+const FAQ_Array = [
+  {
+    title: "Is QTify free to use?",
+    summary: "Yes it is 100% free, and has 0% ads!",
+  },
+  {
+    title: "Can i download and listen to songs offline?",
+    summary:
+      "Sorry, unfortunately we don't provide the service to download any songs.",
+  },
+];
 
 function FAQ() {
   return (
     <div className={styles.FAQ_section}>
       <div className={styles.FAQ_title}>FAQs</div>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="pan el1a-header"
-        >
-          <Typography>Is QTify free to use?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-           Yes it is 100% free, and has 0% ads!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <br/>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="pan el1a-header"
-        >
-          <Typography>Can i download and listen to songs offline?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Sorry, unfortunately we don't provide the service to download any songs.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      <AccordionBox data={FAQ_Array} />
     </div>
   );
 }

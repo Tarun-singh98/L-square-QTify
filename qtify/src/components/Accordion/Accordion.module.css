@@ -1,0 +1,22 @@
+.accordion_wrapper {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-radius: 10px;
+}
+.accordion_summary,
+.accordion_details {
+  width: 1135px;
+  height: 78px;
+}
+
+.accordion_summary {
+  background: var(--color-black);
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+.MuiAccordionSummary-expandIconWrapper {
+  color: var(--color-primary);
+}
