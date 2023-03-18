@@ -13,7 +13,7 @@ function AccordionBox({ data }) {
         return (
           <Accordion key={ele.title} className={styles.accordion_wrapper}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon color="green" />}
               aria-controls="panel1a-content"
               id="pan el1a-header"
               className={styles.accordion_summary}

@@ -1,6 +1,4 @@
 .accordion_wrapper {
-  font-size: 20px;
-  font-weight: 500;
   margin-top: 24px;
   border-radius: 10px;
 }
@@ -8,6 +6,8 @@
 .accordion_details {
   width: 1135px;
   height: 78px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .accordion_summary {
@@ -15,6 +15,9 @@
   border: 1px solid var(--color-white);
   color: var(--color-white);
   border-radius: 10px;
+}
+.accordion_details{
+  padding: 20px 0px 0px 20px;
 }
 
 .MuiAccordionSummary-expandIconWrapper {
