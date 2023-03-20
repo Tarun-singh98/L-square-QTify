@@ -2,15 +2,21 @@ import React, { useEffect, useState } from "react";
 import styles from "./AlbumSection.module.css";
 import Card from "../Card/Card.jsx";
 import Carousel from "../Carousel/Carousel";
+import Filters from "../Filters/Filters";
 
-function AlbumSection({ title, type, dataSource }) {
+function AlbumSection({ title, type, dataSource , filterSource}) {
   const [Cards, setCards] = useState([]);
   const [isShowAll, setIsShowAll] = useState(false);
+  const [filters, setFilters] = useState([])
 
   useEffect(() => {
     dataSource().then((response) => setCards(response));
+    if(filterSource){
+      filterSource().then((response) => setFilters(response.data));
+    }
   }, []);
 
+  console.log(filters);
   const handleToggle = () => {
     setIsShowAll((prevState) => !prevState);
   };
@@ -19,6 +25,7 @@ function AlbumSection({ title, type, dataSource }) {
     <div className={styles.album_section}>
       <div className={styles.album_top}>
         <div className={styles.text1}>{title}</div>
+        
         <div className={styles.text2} onClick={handleToggle}>
           {type === "song" ? (
             ""
@@ -27,6 +34,7 @@ function AlbumSection({ title, type, dataSource }) {
           )}
         </div>
       </div>
+      {filterSource && <Filters filters={filters}/>}
       {isShowAll ? (
         <div className={styles.Card_wrapper}>
           {Cards.map((card) => (

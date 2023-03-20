@@ -1,0 +1,7 @@
+.CarouselLeftNavigation_wrapper {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 10;
+  transform: translateY(-50%);
+}
