@@ -8,17 +8,21 @@ import CarouselRightNavigation from "./CarouselRightNavigation/CarouselRightNavi
 function Carousel({ data, showData }) {
   return (
     <div className={styles.carousel_main_wrapper}>
-      <CarouselLeftNavigation />
-      <CarouselRightNavigation />
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={"auto"}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
+        <CarouselLeftNavigation />
         {data.map((ele) => {
-          return <SwiperSlide key={ele.id}>{showData(ele)}  </SwiperSlide>;
+          return (
+            <SwiperSlide className={styles.swiper} key={ele.id}>
+              {showData(ele)}{" "}
+            </SwiperSlide>
+          );
         })}
+        <CarouselRightNavigation />
       </Swiper>
     </div>
   );

@@ -4,6 +4,7 @@ import styles from "./CarouselRightNavigation.module.css";
 
 const CarouselRightNavigation = () => {
   const swiper = useSwiper();
+
   return (
     <div
       className={styles.CarouselRightNavigation_wrapper}

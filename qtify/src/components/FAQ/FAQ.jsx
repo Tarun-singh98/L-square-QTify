@@ -18,7 +18,7 @@ function FAQ() {
   return (
     <div className={styles.FAQ_section}>
       <div className={styles.FAQ_title}>FAQs</div>
-      <AccordionBox data={FAQ_Array} />
+        <AccordionBox data={FAQ_Array} />
     </div>
   );
 }
