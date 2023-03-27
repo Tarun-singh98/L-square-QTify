@@ -9,7 +9,7 @@ function Carousel({ data, showData }) {
   return (
     <div className={styles.carousel_main_wrapper}>
       <Swiper
-        spaceBetween={20}
+        spaceBetween={30}
         slidesPerView={"auto"}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}

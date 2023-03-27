@@ -10,6 +10,7 @@ import {
 } from "./api/api.js";
 import FAQ from "./components/FAQ/FAQ";
 import { StyledEngineProvider } from "@mui/material/styles";
+import Player from "./components/SongPlayer/Player";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           filterSource={fetchFilters}
         />
         <FAQ />
+        <Player dataSource={fetchSongs}/>
       </StyledEngineProvider>
     </>
   );
