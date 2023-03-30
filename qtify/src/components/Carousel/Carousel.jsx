@@ -24,7 +24,7 @@ function Carousel({ data, showData }) {
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
-        <Controls data={data} />
+        {/* <Controls data={data} /> */}
         <CarouselLeftNavigation />
         {data.map((ele) => {
           return (
