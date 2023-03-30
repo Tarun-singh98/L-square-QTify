@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./Button.module.css";
-function Button() {
+
+function Btn({ buttonText , handleChange}) {
   return (
     <div>
-      <button className={styles.button}>Give Feedback</button>
+      <button className={styles.button} onClick={handleChange}>{buttonText}</button>
     </div>
   );
 }
 
-export default Button;
+export default Btn;

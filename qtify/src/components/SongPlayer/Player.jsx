@@ -179,7 +179,7 @@ function Player({ dataSource }) {
             <TinyText>-{formatDuration(duration - position)}</TinyText>
           </Box>
         </Box>
-        <box>
+        <Box>
           <Stack
             spacing={2}
             direction="row"
@@ -211,7 +211,7 @@ function Player({ dataSource }) {
             />
             <VolumeUpRounded htmlColor={lightIconColor} />
           </Stack>
-        </box>
+        </Box>
       </Widget>
     </Box>
   );

@@ -11,10 +11,9 @@ function a11yProps(index) {
   };
 }
 
-function Filters({ filters, selectedFilterIndex, setSelectedFilterIndex }) {
-
+function Filters({ filters, selectFilterIndex, setSelectFilterIndex }) {
   const handleChange = (event, newValue) => {
-    setSelectedFilterIndex(newValue);
+    setSelectFilterIndex(newValue);
   };
 
   return (
@@ -22,7 +21,7 @@ function Filters({ filters, selectedFilterIndex, setSelectedFilterIndex }) {
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
-            value={selectedFilterIndex}
+            value={selectFilterIndex}
             onChange={handleChange}
             aria-label="basic tabs example"
             TabIndicatorProps={{

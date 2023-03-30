@@ -1,7 +1,7 @@
 .album_section {
   background-color: var(--color-black);
   padding: 24px 32px 20px 32px;
-  width: 100vw;
+  /* width: 100vw; */
 }
 .album_top {
   display: flex;

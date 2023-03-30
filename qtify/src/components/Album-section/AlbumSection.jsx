@@ -22,15 +22,15 @@ function AlbumSection({ title, type, dataSource, filterSource }) {
     }
   }, []);
 
-  console.log(Cards);
-  console.log(filters);
-  
+  // console.log(Cards);
+  // console.log(filters);
+
   const filterCards = Cards.filter((card) =>
     selectedFilterIndex !== 0
       ? card.genre.key === filters[selectedFilterIndex].key
       : card
   );
-  console.log(filterCards);
+  // console.log(filterCards);
 
   const handleToggle = () => {
     setIsShowAll((prevState) => !prevState);
