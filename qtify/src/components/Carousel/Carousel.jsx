@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect , useRef} from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import CarouselLeftNavigation from "./CarouselLeftNavigation/CarouselLeftNavigation";
@@ -6,6 +6,7 @@ import styles from "./Carousel.module.css";
 import CarouselRightNavigation from "./CarouselRightNavigation/CarouselRightNavigation";
 
 const Controls = ({ data }) => {
+  console.log(data);
   const swiper = useSwiper();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function Carousel({ data, showData }) {
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
-        {/* <Controls data={data} /> */}
+        <Controls data={data} />
         <CarouselLeftNavigation />
         {data.map((ele) => {
           return (

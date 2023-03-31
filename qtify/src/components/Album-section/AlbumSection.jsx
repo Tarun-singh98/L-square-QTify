@@ -25,7 +25,7 @@ function AlbumSection({ title, type, dataSource, filterSource }) {
   // console.log(Cards);
   // console.log(filters);
 
-  const filterCards = Cards.filter((card) =>
+  const filterCards = Cards?.filter((card) =>
     selectedFilterIndex !== 0
       ? card.genre.key === filters[selectedFilterIndex].key
       : card
