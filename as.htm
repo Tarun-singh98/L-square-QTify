@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display" class="time">00:00:00</div>
+    <div class="buttons">
+      <button onclick="start()">Start</button>
+      <button onclick="pause()">Pause</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+  </body>
+  <script>
+    let startTime,
+      elapsedTime = 0,
+      timeInterval;
+
+    function formatTime(time) {
+      let hours = Math.floor(time / 3600000);
+      let minutes = Math.floor((time % 3600000) / 60000);
+      let seconds = Math.floor((time % 60000) / 1000);
+
+      return (
+        (hours < 10 ? "0" + hours : hours) +
+        ":" +
+        (minutes < 10 ? "0" + minutes : minutes) +
+        ":" +
+        (seconds < 10 ? "0" + seconds : seconds)
+      );
+    }
+
+    function print(text) {
+      document.getElementById("display").innerHTML = text;
+    }
+
+    function start() {
+      if (!timeInterval) {
+        startTime = Date.now() - elapsedTime;
+        timeInterval = setInterval(() => {
+          elapsedTime = Date.now() - startTime;
+          print(formatTime(elapsedTime));
+        }, 1000);
+      }
+    }
+
+    function pause() {
+      clearInterval(timeInterval);
+      timeInterval = null;
+    }
+
+    function reset() {
+      clearInterval(timeInterval);
+      timeInterval = null;
+      elapsedTime = 0;
+      print("00:00:00");
+    }
+  </script>
+</html>

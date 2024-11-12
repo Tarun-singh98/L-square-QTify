@@ -9,7 +9,7 @@ import PauseRounded from "@mui/icons-material/PauseRounded";
 import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
 import FastForwardRounded from "@mui/icons-material/FastForwardRounded";
 import FastRewindRounded from "@mui/icons-material/FastRewindRounded";
-import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";
+import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";  
 import VolumeDownRounded from "@mui/icons-material/VolumeDownRounded";
 import styles from "./Player.module.css";
 import image from "./Rectangle2138.png";
